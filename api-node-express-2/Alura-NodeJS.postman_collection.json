@@ -24,7 +24,7 @@
 			"response": []
 		},
 		{
-			"name": "Autores",
+			"name": "Listar Autores",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -43,7 +43,61 @@
 			"response": []
 		},
 		{
-			"name": "Autores By Id",
+			"name": "Listar Autores com Limite",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/autores?limite=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autores"
+					],
+					"query": [
+						{
+							"key": "limite",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Autores com Limite e Ordenação",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/autores?limite=5&ordenacao=nome:1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autores"
+					],
+					"query": [
+						{
+							"key": "limite",
+							"value": "5"
+						},
+						{
+							"key": "ordenacao",
+							"value": "nome:1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Autor por Id",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -63,12 +117,32 @@
 			"response": []
 		},
 		{
-			"name": "Livros",
+			"name": "Listar Livros",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/livros",
+					"raw": "http://localhost:3000/livros/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Livros com Ordenação",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros?ordenacao=titulo:1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -76,6 +150,110 @@
 					"port": "3000",
 					"path": [
 						"livros"
+					],
+					"query": [
+						{
+							"key": "ordenacao",
+							"value": "titulo:1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Livros com Busca e Ordenação",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros/busca?nomeAutor=Marty Cagan&ordenacao=titulo:1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						"busca"
+					],
+					"query": [
+						{
+							"key": "nomeAutor",
+							"value": "Marty Cagan"
+						},
+						{
+							"key": "ordenacao",
+							"value": "titulo:1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Livros com Busca e Ordenação com Limite",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros/busca?nomeAutor=Marty Cagan&ordenacao=titulo:1&limite=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						"busca"
+					],
+					"query": [
+						{
+							"key": "nomeAutor",
+							"value": "Marty Cagan"
+						},
+						{
+							"key": "ordenacao",
+							"value": "titulo:1"
+						},
+						{
+							"key": "limite",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Livros com Busca e Ordenação e Paginação",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros/busca?nomeAutor=Marty Cagan&ordenacao=titulo:1&pagina=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						"busca"
+					],
+					"query": [
+						{
+							"key": "nomeAutor",
+							"value": "Marty Cagan"
+						},
+						{
+							"key": "ordenacao",
+							"value": "titulo:1"
+						},
+						{
+							"key": "pagina",
+							"value": "2"
+						}
 					]
 				}
 			},
@@ -83,6 +261,32 @@
 		},
 		{
 			"name": "Busca por Autor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros/busca?nome=Marty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						"busca"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Marty"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca por Autor com Limite",
 			"request": {
 				"method": "GET",
 				"header": [],
