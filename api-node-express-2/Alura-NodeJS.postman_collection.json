@@ -43,6 +43,26 @@
 			"response": []
 		},
 		{
+			"name": "Autores By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/autores/67badd00634fd9c5cedf89d9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autores",
+						"67badd00634fd9c5cedf89d9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Livros",
 			"request": {
 				"method": "GET",
@@ -112,6 +132,26 @@
 					"port": "3000",
 					"path": [
 						"autores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Autor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/autores/6843b98ef824a92148bd0e39",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autores",
+						"6843b98ef824a92148bd0e39"
 					]
 				}
 			},
