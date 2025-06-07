@@ -82,6 +82,88 @@
 			"response": []
 		},
 		{
+			"name": "Busca por Autor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros/busca?nome=Marty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						"busca"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Marty"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca por Título",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros/busca?titulo=Transformed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						"busca"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": "Transformed"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca por Título e Autor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros/busca?titulo=Transformed&autor=Marty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						"busca"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": "Transformed"
+						},
+						{
+							"key": "autor",
+							"value": "Marty"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Cadastrar Livro",
 			"request": {
 				"method": "POST",
