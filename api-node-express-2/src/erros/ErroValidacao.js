@@ -1,16 +1,13 @@
-class ErroBase extends Error {
-  constructor(mensagem = "Erro interno do servidor", status = 500) {
-    super();
-    this.message = mensagem;
-    this.status = status;
-  }
+import RequisicaoIncorreta from "./RequisicaoIncorreta.js";
 
-  enviarResposta(res) {
-    res.status(this.status).send({
-      mensagem: this.message,
-      status: this.status
-    });
+class ErroValidacao extends RequisicaoIncorreta {
+  constructor(erro) {
+    const mensagensErro = Object.values(erro.errors)
+      .map(erro => erro.message)
+      .join("; ");
+
+    super(`Os seguintes erros foram encontrados: ${mensagensErro}`);
   }
 }
 
-export default ErroBase;
+export default ErroValidacao;
