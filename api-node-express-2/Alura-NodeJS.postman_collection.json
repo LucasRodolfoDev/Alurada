@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "a350010e-4de5-4ac2-9a7f-f27fa146383f",
+		"name": "Alura/NodeJS",
+		"description": "HTTP requests used to follow the training about Node.js and Express by Alura.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7740971"
+	},
+	"item": [
+		{
+			"name": "Primeira Requisição",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/autores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Livros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Livro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"titulo\": \"Transformed\",\n    \"autor\": \"67badd00634fd9c5cedf89d9\",\n    \"editora\": \"Alta\",\n    \"numeroPaginas\": 300\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/livros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Autor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Marty Cagan\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/autores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autores"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
