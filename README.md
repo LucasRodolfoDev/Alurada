@@ -84,3 +84,37 @@ Este projeto implementa uma API RESTful utilizando o framework Express.js e o ba
 4. Execute o servidor com `npm run dev`.  
 5. Acesse a API através dos endpoints definidos (ex: `http://localhost:3000/livros`).
 
+### 7. API Node.js com Express - Parte 2
+**Diretório:** `api-node-express-2`  
+**Descrição:**  
+Este projeto implementa uma API RESTful mais avançada utilizando Node.js e Express, focando em boas práticas de desenvolvimento e organização do código. O projeto inclui configuração de ESLint para padronização do código e utiliza Postman para testes da API.  
+**Arquivos principais:**  
+- `server.js`: Ponto de entrada da aplicação.  
+- `src/`: Diretório contendo a estrutura organizada do projeto.  
+- `.eslintrc.json`: Configurações do ESLint para padronização do código.  
+- `Alura-NodeJS.postman_collection.json`: Coleção de requisições para testes da API.  
+**Dependências principais:**  
+- Express.js  
+- ESLint  
+- Dotenv  
+- Nodemon (para desenvolvimento)  
+**Como executar:**  
+1. Certifique-se de ter o Node.js instalado.  
+2. Instale as dependências com `npm install`.  
+3. Configure as variáveis de ambiente no arquivo `.env`.  
+4. Execute o servidor com `npm run dev`.  
+5. Utilize a coleção do Postman para testar os endpoints da API.
+
+### 8. JavaScript Assíncrono
+**Diretório:** `javascrip-assincrono`  
+**Descrição:**  
+Este diretório contém exemplos e exercícios práticos sobre programação assíncrona em JavaScript, abordando conceitos como Promises, async/await, callbacks e manipulação de eventos assíncronos. Os exemplos demonstram como trabalhar com operações assíncronas de forma eficiente e organizada.  
+**Tópicos abordados:**  
+- Promises e suas características  
+- Async/await para código assíncrono mais limpo  
+- Callbacks e suas limitações  
+- Manipulação de erros em operações assíncronas  
+- Event Loop e sua importância  
+**Como executar:**  
+Os exemplos podem ser executados em um ambiente Node.js ou no navegador, dependendo do contexto do exercício.
+
