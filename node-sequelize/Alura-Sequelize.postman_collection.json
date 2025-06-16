@@ -7,26 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Teste",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/teste",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"teste"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get All Pessoas",
+			"name": "Buscar todas as Pessoas",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -45,13 +26,72 @@
 			"response": []
 		},
 		{
-			"name": "Update Pessoa by ID",
+			"name": "Buscar todas as Categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos os Cursos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cursos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Matrícula por estudanteId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoas/1/matriculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						"1",
+						"matriculas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Pessoa por Id",
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"cpf\": \"12345678901\"\n}",
+					"raw": "{\n    \"cpf\": \"12345678999\",\n    \"nome\": \"Lucas Rodolfo\",\n    \"email\": \"lrodolfo30@gmail.com\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -68,6 +108,36 @@
 					"path": [
 						"pessoas",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Matrícula",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"cancelado\",\n    \"estudante_id\": 1,\n    \"curso_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pessoas/1/matriculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						"1",
+						"matriculas"
 					]
 				}
 			},

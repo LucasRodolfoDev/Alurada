@@ -106,7 +106,7 @@ Este projeto implementa uma API RESTful mais avançada utilizando Node.js e Expr
 5. Utilize a coleção do Postman para testar os endpoints da API.
 
 ### 8. JavaScript Assíncrono
-**Diretório:** `javascrip-assincrono`  
+**Diretório:** `javascript-assincrono`  
 **Descrição:**  
 Este diretório contém exemplos e exercícios práticos sobre programação assíncrona em JavaScript, abordando conceitos como Promises, async/await, callbacks e manipulação de eventos assíncronos. Os exemplos demonstram como trabalhar com operações assíncronas de forma eficiente e organizada.  
 **Tópicos abordados:**  
@@ -117,4 +117,27 @@ Este diretório contém exemplos e exercícios práticos sobre programação ass
 - Event Loop e sua importância  
 **Como executar:**  
 Os exemplos podem ser executados em um ambiente Node.js ou no navegador, dependendo do contexto do exercício.
+
+### 9. Node.js com Sequelize - Parte 1
+**Diretório:** `node-sequelize`  
+**Descrição:**  
+Este projeto implementa uma API RESTful utilizando Node.js, Express e Sequelize como ORM para interação com banco de dados. É a primeira parte de dois cursos da Alura sobre ORM Sequelize, focando nos conceitos fundamentais e práticas básicas de uso do Sequelize.  
+**Arquivos principais:**  
+- `src/`: Diretório contendo a estrutura organizada do projeto
+- `src/models/`: Definição dos modelos de dados
+- `src/routes/`: Definição das rotas da API
+- `src/controllers/`: Implementação das funcionalidades
+- `src/config/`: Configurações do banco de dados e conexão
+**Dependências principais:**  
+- Express.js
+- Sequelize
+- MySQL2
+- Dotenv
+- Nodemon (para desenvolvimento)
+**Como executar:**  
+1. Certifique-se de ter o Node.js e MySQL instalados
+2. Instale as dependências com `npm install`
+3. Configure as variáveis de ambiente no arquivo `.env`
+4. Execute o servidor com `npm run dev`
+5. Acesse a API através dos endpoints definidos
 
