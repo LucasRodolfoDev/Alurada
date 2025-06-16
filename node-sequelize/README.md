@@ -5,9 +5,24 @@
 $ 
 ```
 
-## Gerando um modelo via Sequelize-CLI
+## Gerando o modelo Pessoa
 ```
 $ npx sequelize-cli model:generate --name Pessoa --attributes nome:string,email:string,cpf:string,ativo:boolean,role:string
+```
+
+## Gerando o modelo Categoria
+```
+$ npx sequelize-cli model:generate --name Categoria --attributes titulo:string
+```
+
+## Gerando o modelo Curso
+```
+$ npx sequelize-cli model:generate --name Curso --attributes titulo:string,descricao:string,data_inicio:dateonly
+```
+
+## Gerando o modelo Matricula
+```
+$ npx sequelize-cli model:generate --name Matricula --attributes status:string
 ```
 
 ## 
