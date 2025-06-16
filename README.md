@@ -121,23 +121,43 @@ Os exemplos podem ser executados em um ambiente Node.js ou no navegador, depende
 ### 9. Node.js com Sequelize - Parte 1
 **Diretório:** `node-sequelize`  
 **Descrição:**  
-Este projeto implementa uma API RESTful utilizando Node.js, Express e Sequelize como ORM para interação com banco de dados. É a primeira parte de dois cursos da Alura sobre ORM Sequelize, focando nos conceitos fundamentais e práticas básicas de uso do Sequelize.  
+Este projeto implementa uma API RESTful para um sistema de cursos e matrículas, utilizando Node.js, Express e Sequelize como ORM. O projeto demonstra a implementação de um sistema completo com relacionamentos entre entidades, validações e operações CRUD.  
 **Arquivos principais:**  
-- `src/`: Diretório contendo a estrutura organizada do projeto
-- `src/models/`: Definição dos modelos de dados
-- `src/routes/`: Definição das rotas da API
-- `src/controllers/`: Implementação das funcionalidades
-- `src/config/`: Configurações do banco de dados e conexão
+- `src/`: Estrutura organizada do projeto
+  - `controllers/`: Controladores para cada entidade
+  - `database/`: Configurações do banco de dados
+  - `models/`: Modelos Sequelize (Pessoa, Categoria, Curso, Matricula)
+  - `routes/`: Rotas da API
+  - `services/`: Lógica de negócios
+- `Alura-Sequelize.postman_collection.json`: Coleção de requisições para testes
+- `.sequelizerc`: Configuração do Sequelize CLI
+- `Modelo Entidade Relacionamento - MER.png`: Diagrama do banco de dados
+
+**Funcionalidades implementadas:**
+- CRUD completo para Pessoas, Categorias, Cursos e Matrículas
+- Relacionamentos entre entidades
+- Validações de dados
+- Migrations para controle de versão do banco
+- Seeds para dados iniciais
+
 **Dependências principais:**  
 - Express.js
 - Sequelize
-- SQLite
+- SQLite3
 - Dotenv
-- Nodemon (para desenvolvimento)
+- Nodemon (desenvolvimento)
+- ESLint
+
 **Como executar:**  
-1. Certifique-se de ter o Node.js e MySQL instalados
-2. Instale as dependências com `npm install`
-3. Configure as variáveis de ambiente no arquivo `.env`
-4. Execute o servidor com `npm run dev`
-5. Acesse a API através dos endpoints definidos
+1. Instale as dependências com `npm install`
+2. Execute as migrações com `npx sequelize-cli db:migrate`
+3. (Opcional) Execute os seeds com `npx sequelize-cli db:seed:all`
+4. Inicie o servidor com `npm run dev`
+5. Utilize a coleção do Postman para testar os endpoints
+
+**Endpoints disponíveis:**
+- `/pessoas`: CRUD de pessoas
+- `/categorias`: CRUD de categorias
+- `/cursos`: CRUD de cursos
+- `/matriculas`: CRUD de matrículas
 
