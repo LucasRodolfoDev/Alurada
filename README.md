@@ -131,7 +131,7 @@ Este projeto implementa uma API RESTful utilizando Node.js, Express e Sequelize 
 **Dependências principais:**  
 - Express.js
 - Sequelize
-- MySQL2
+- SQLite
 - Dotenv
 - Nodemon (para desenvolvimento)
 **Como executar:**  
