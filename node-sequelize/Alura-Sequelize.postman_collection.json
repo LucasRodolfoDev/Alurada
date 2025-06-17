@@ -173,6 +173,26 @@
 			"response": []
 		},
 		{
+			"name": "Buscar todas as Categorias por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/categorias/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categorias",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Buscar todos os Cursos",
 			"request": {
 				"method": "GET",
@@ -186,6 +206,49 @@
 					"port": "3000",
 					"path": [
 						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Cursos Lotados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoas/matriculas/lotadas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						"matriculas",
+						"lotadas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Matrículas por estudante_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoas/1/matriculas/confirmadas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						"1",
+						"matriculas",
+						"confirmadas"
 					]
 				}
 			},
