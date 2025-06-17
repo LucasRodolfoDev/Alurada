@@ -11,6 +11,7 @@ src/
 ├── models/        # Modelos Sequelize
 ├── routes/        # Rotas da API
 ├── services/      # Serviços da aplicação
+├── utils/         # Utilitários e helpers
 └── app.js         # Configuração do Express
 ```
 
@@ -41,10 +42,27 @@ src/
 ## Endpoints da API
 
 ### Pessoas
-- `GET /pessoas` - Lista todas as pessoas
+- `GET /pessoas` - Lista todas as pessoas ativas
+- `GET /pessoas/todos` - Lista todas as pessoas (ativas e inativas)
 - `GET /pessoas/:id` - Obtém uma pessoa específica
 - `POST /pessoas` - Cria uma nova pessoa
+  ```json
+  {
+    "cpf": "98765432109",
+    "nome": "Matheus Ramos",
+    "email": "matheuscarino@gmail.com",
+    "ativo": true,
+    "role": "estudante"
+  }
+  ```
 - `PUT /pessoas/:id` - Atualiza uma pessoa
+  ```json
+  {
+    "cpf": "12345678901",
+    "nome": "Lucas Rodolfo",
+    "email": "lrodolfo30@gmail.com"
+  }
+  ```
 - `DELETE /pessoas/:id` - Remove uma pessoa
 
 ### Categorias
@@ -62,11 +80,12 @@ src/
 - `DELETE /cursos/:id` - Remove um curso
 
 ### Matrículas
-- `GET /matriculas` - Lista todas as matrículas
-- `GET /matriculas/:id` - Obtém uma matrícula específica
-- `POST /matriculas` - Cria uma nova matrícula
-- `PUT /matriculas/:id` - Atualiza uma matrícula
-- `DELETE /matriculas/:id` - Remove uma matrícula
+- `GET /pessoas/:id/matriculas` - Lista matrículas ativas de uma pessoa
+- `GET /pessoas/:id/matriculas/todos` - Lista todas as matrículas de uma pessoa
+- `GET /pessoas/:id/matriculas/:matriculaId` - Obtém uma matrícula específica de uma pessoa
+- `POST /pessoas/:id/matriculas` - Cria uma nova matrícula para uma pessoa
+- `PUT /pessoas/:id/matriculas/:matriculaId` - Atualiza uma matrícula específica
+- `DELETE /pessoas/:id/matriculas/:matriculaId` - Remove uma matrícula específica
 
 ## Como Executar
 
@@ -92,13 +111,12 @@ npm run dev
 
 ## Testando a API
 
-Você pode utilizar a coleção do Postman incluída no projeto (`Alura-Sequelize.postman_collection.json`) para testar todos os endpoints da API.
+Você pode utilizar a coleção do Postman incluída no projeto (`Alura-Sequelize.postman_collection.json`) para testar todos os endpoints da API. A coleção contém exemplos de requisições para todos os endpoints disponíveis.
 
 ## Dependências Principais
 
 - Express.js
 - Sequelize
 - SQLite3
-- Dotenv
 - Nodemon (desenvolvimento)
 - ESLint

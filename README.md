@@ -118,10 +118,10 @@ Este diretório contém exemplos e exercícios práticos sobre programação ass
 **Como executar:**  
 Os exemplos podem ser executados em um ambiente Node.js ou no navegador, dependendo do contexto do exercício.
 
-### 9. Node.js com Sequelize - Parte 1
+### 9. Node.js com Sequelize
 **Diretório:** `node-sequelize`  
 **Descrição:**  
-Este projeto implementa uma API RESTful para um sistema de cursos e matrículas, utilizando Node.js, Express e Sequelize como ORM. O projeto demonstra a implementação de um sistema completo com relacionamentos entre entidades, validações e operações CRUD.  
+Este projeto implementa uma API RESTful para um sistema de cursos e matrículas, utilizando Node.js, Express e Sequelize como ORM. O projeto demonstra a implementação de um sistema completo com relacionamentos entre entidades e operações CRUD.  
 **Arquivos principais:**  
 - `src/`: Estrutura organizada do projeto
   - `controllers/`: Controladores para cada entidade
@@ -129,6 +129,7 @@ Este projeto implementa uma API RESTful para um sistema de cursos e matrículas,
   - `models/`: Modelos Sequelize (Pessoa, Categoria, Curso, Matricula)
   - `routes/`: Rotas da API
   - `services/`: Lógica de negócios
+  - `utils/`: Utilitários e helpers
 - `Alura-Sequelize.postman_collection.json`: Coleção de requisições para testes
 - `.sequelizerc`: Configuração do Sequelize CLI
 - `Modelo Entidade Relacionamento - MER.png`: Diagrama do banco de dados
@@ -144,7 +145,6 @@ Este projeto implementa uma API RESTful para um sistema de cursos e matrículas,
 - Express.js
 - Sequelize
 - SQLite3
-- Dotenv
 - Nodemon (desenvolvimento)
 - ESLint
 
