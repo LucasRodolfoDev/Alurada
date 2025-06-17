@@ -7,19 +7,147 @@
 	},
 	"item": [
 		{
-			"name": "Buscar todas as Pessoas",
+			"name": "Buscar todas as Pessoas (apenas ativas)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/pessoas",
+					"raw": "http://localhost:3000/pessoas/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"pessoas"
+						"pessoas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todas as Pessoas Ativas ou Inativas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoas/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Pessoa por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar Pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cpf\": \"98765432109\",\n    \"nome\": \"Matheus Ramos\",\n    \"email\": \"matheuscarino@gmail.com\",\n    \"ativo\": true,\n    \"role\": \"estudante\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pessoas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Pessoa por Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cpf\": \"12345678901\",\n    \"nome\": \"Lucas Rodolfo\",\n    \"email\": \"lrodolfo30@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pessoas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Pessoa por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cpf\": \"12345678901\",\n    \"nome\": \"Lucas Rodolfo\",\n    \"email\": \"lrodolfo30@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pessoas/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						"10"
 					]
 				}
 			},
@@ -64,7 +192,7 @@
 			"response": []
 		},
 		{
-			"name": "Buscar Matrícula por estudanteId",
+			"name": "Buscar Matrícula ATIVA por estudante_id",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -85,21 +213,12 @@
 			"response": []
 		},
 		{
-			"name": "Atualizar Pessoa por Id",
+			"name": "Buscar TODAS as Matrículas por estudante_id",
 			"request": {
-				"method": "PUT",
+				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"cpf\": \"12345678999\",\n    \"nome\": \"Lucas Rodolfo\",\n    \"email\": \"lrodolfo30@gmail.com\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "http://localhost:3000/pessoas/1",
+					"raw": "http://localhost:3000/pessoas/1/matriculas/todos",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -107,7 +226,62 @@
 					"port": "3000",
 					"path": [
 						"pessoas",
-						"1"
+						"1",
+						"matriculas",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Matrícula específica pelo id da Matrícula e id da Pessoa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pessoas/1/matriculas/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						"1",
+						"matriculas",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza Matricula pelo id da matrícula e id da Pessoa",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"cancelado\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pessoas/1/matriculas/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						"1",
+						"matriculas",
+						"12"
 					]
 				}
 			},
@@ -120,7 +294,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"status\": \"cancelado\",\n    \"estudante_id\": 1,\n    \"curso_id\": 2\n}",
+					"raw": "{\n    \"status\": \"matriculado\",\n    \"estudante_id\": 11,\n    \"curso_id\": 2\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -128,7 +302,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/pessoas/1/matriculas",
+					"raw": "http://localhost:3000/pessoas/11/matriculas",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -136,8 +310,39 @@
 					"port": "3000",
 					"path": [
 						"pessoas",
-						"1",
+						"11",
 						"matriculas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Matrícula",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"matriculado\",\n    \"estudante_id\": 11,\n    \"curso_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pessoas/11/matriculas/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pessoas",
+						"11",
+						"matriculas",
+						"14"
 					]
 				}
 			},
