@@ -1,8 +1,11 @@
 import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
 
-const cliente = new MongoClient(
-  "mongodb://localhost/?retryWrites=true&w=majority"
-);
+dotenv.config();
+
+const uri = process.env.MONGODB_URI
+
+const cliente = new MongoClient(uri)
 
 let documentosColecao;
 
