@@ -161,3 +161,90 @@ Este projeto implementa uma API RESTful para um sistema de cursos e matrículas,
 - `/cursos`: CRUD de cursos
 - `/matriculas`: CRUD de matrículas
 
+### 10. AluraDocs - Editor Colaborativo (WebSockets)
+**Diretório:** `websockets`  
+**Descrição:**  
+Este projeto implementa um editor de documentos colaborativo em tempo real utilizando WebSockets (Socket.IO). Permite que múltiplos usuários editem o mesmo documento simultaneamente com sincronização instantânea das alterações.  
+**Funcionalidades principais:**  
+- Criação, listagem e exclusão de documentos
+- Edição colaborativa em tempo real
+- Sincronização automática entre todos os usuários conectados
+- Persistência dos documentos no MongoDB
+- Interface web simples e intuitiva
+
+**Tecnologias utilizadas:**  
+- **Backend:** Node.js, Express, Socket.IO, MongoDB
+- **Frontend:** HTML, CSS (Bootstrap), JavaScript
+- **Desenvolvimento:** Nodemon
+
+**Estrutura do projeto:**  
+- `public/`: Frontend com páginas HTML e JavaScript
+- `src/`: Backend com servidor Express e lógica WebSocket
+- `mongo_scripts/`: Scripts auxiliares para MongoDB
+
+**Como executar:**  
+1. Certifique-se de ter Node.js e MongoDB instalados
+2. Instale as dependências com `npm install`
+3. Inicie o servidor com `npm run dev`
+4. Acesse `http://localhost:3000` no navegador
+
+**Dependências principais:**  
+- Express.js
+- Socket.IO
+- MongoDB
+- Dotenv
+- Nodemon (desenvolvimento)
+
+### 11. AluraDocs - Sistema Completo com Autenticação
+**Diretório:** `alura-docs`  
+**Descrição:**  
+Versão avançada do editor colaborativo com sistema completo de autenticação de usuários. Este projeto expande as funcionalidades do editor básico, adicionando login, cadastro, JWT e gerenciamento de usuários conectados.  
+**Funcionalidades principais:**  
+- Sistema de autenticação com JWT
+- Cadastro e login de usuários
+- Editor colaborativo em tempo real
+- Lista de usuários conectados ao documento
+- Gerenciamento completo de documentos
+- Interface responsiva com Bootstrap 5
+- Criptografia de senhas com bcrypt
+
+**Tecnologias utilizadas:**  
+- **Backend:** Node.js, Express, Socket.IO, MongoDB, JWT, bcrypt
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+), Bootstrap 5
+- **Segurança:** JWT para autenticação, bcrypt para senhas
+
+**Estrutura do projeto:**  
+- `public/`: Frontend organizado por funcionalidades (login, cadastro, documento)
+- `servidor/`: Backend com middlewares, eventos Socket.IO e utilitários
+- `mongo_scripts/`: Scripts para MongoDB
+
+**Funcionalidades de segurança:**  
+- Senhas criptografadas com bcrypt
+- Autenticação baseada em JWT
+- Middleware de autorização para rotas protegidas
+- Validação de entrada de dados
+
+**Como executar:**  
+1. Certifique-se de ter Node.js e MongoDB instalados
+2. Instale as dependências com `npm install`
+3. Configure as variáveis de ambiente no arquivo `.env`:
+   ```
+   MONGODB_URI=sua_uri_do_mongodb
+   JWT_SECRET=seu_jwt_secret
+   ```
+4. Inicie o servidor com `npm run dev`
+5. Acesse `http://localhost:3000` no navegador
+
+**Dependências principais:**  
+- Express.js
+- Socket.IO
+- MongoDB
+- jsonwebtoken
+- bcrypt
+- Dotenv
+- Nodemon (desenvolvimento)
+
+**Banco de dados:**  
+- Coleção `usuarios`: Informações dos usuários
+- Coleção `documentos`: Documentos criados pelos usuários
+
