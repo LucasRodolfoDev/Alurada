@@ -20,6 +20,8 @@ services:
       - postgres
     volumes:
       - ./docker/dbdata/pgadmin:/var/lib/pgadmin
+      - ./pgadmin-data/servers.json:/pgadmin4/servers.json
+      - ./pgadmin-data/pgpass:/var/lib/pgadmin/pgpass
     environment:
       PGADMIN_DEFAULT_EMAIL: postgres@postgres.com
       PGADMIN_DEFAULT_PASSWORD: postgres
