@@ -1,0 +1,45 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: "task-management-api"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_USER: "postgres"
+    volumes:
+      - ./docker/dbdata/postgres:/var/lib/postgresql
+
+  pg-admin:
+    container_name: pg-admin
+    image: dpage/pgadmin4
+    ports:
+      - "8081:80"
+    depends_on:
+      - postgres
+    volumes:
+      - ./docker/dbdata/pgadmin:/var/lib/pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: postgres@postgres.com
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    # connect to the local postgres server automatically
+
+configs:
+  pgpass:
+    content: postgres:5432:*:postgres:postgres
+  servers.json:
+    content: |
+      {
+        "Servers": {
+          "1": {
+            "Group": "Server Group 1",
+            "Name": "Task Management API",
+            "Host": "postgres",
+            "Port": 5432,
+            "MaintenanceDB": "task-management-api",
+            "Username": "postgres",
+            "PassFile": "./pgpass"
+          }
+        }
+      }
