@@ -248,3 +248,120 @@ Versão avançada do editor colaborativo com sistema completo de autenticação 
 - Coleção `usuarios`: Informações dos usuários
 - Coleção `documentos`: Documentos criados pelos usuários
 
+### 12. Autenticação e Teste de Segurança com Node.js
+**Diretório:** `autenticacao-teste-seguranca-nodejs`
+**Descrição:**
+Este projeto explora técnicas de autenticação e segurança em aplicações Node.js, incluindo testes de segurança e validação de dados.
+**Arquivos principais:**
+- `server.js`: Configuração do servidor.
+- `src/`: Implementação das funcionalidades de autenticação.
+- `populate.sql`: Script para popular o banco de dados.
+**Como executar:**
+1. Instale as dependências com `npm install`.
+2. Configure as variáveis de ambiente no arquivo `.env`.
+3. Execute o servidor com `npm start`.
+
+### 13. Criptografia e Tokens JWT
+**Diretório:** `criptografia-tokens-jwt`
+**Descrição:**
+Este projeto demonstra técnicas de criptografia, geração de tokens JWT e segurança de dados em aplicações web.
+**Arquivos principais:**
+- `hash/`: Exemplos de hashing.
+- `token/`: Implementação de geração e validação de tokens JWT.
+- `cifra/`: Técnicas de cifragem.
+**Como executar:**
+1. Instale as dependências com `npm install`.
+2. Execute os scripts individualmente para explorar as técnicas.
+
+### 14. Curso Node.js com OAuth
+**Diretório:** `curso-node-oauth`
+**Descrição:**
+Este projeto implementa autenticação OAuth em aplicações Node.js, integrando com provedores como GitHub.
+**Arquivos principais:**
+- `app.js`: Configuração do servidor.
+- `passport-config.js`: Configuração do Passport para OAuth.
+- `routes/`: Rotas de autenticação e APIs.
+**Como executar:**
+1. Instale as dependências com `npm install`.
+2. Configure as variáveis de ambiente no arquivo `.env`.
+3. Execute o servidor com `npm start`.
+
+### 15. Iniciando com TypeScript
+**Diretório:** `iniciando-typescript`
+**Descrição:**
+Este projeto introduz o uso de TypeScript em aplicações Node.js, com exemplos de tipos, interfaces e classes.
+**Arquivos principais:**
+- `server.ts`: Código principal do servidor.
+- `tsconfig.json`: Configuração do TypeScript.
+- `src/`: Implementação de funcionalidades.
+**Como executar:**
+1. Instale as dependências com `npm install`.
+2. Compile o código com `tsc`.
+3. Execute o servidor com `node build/server.js`.
+
+### 16. MongoDB
+**Diretório:** `mongodb`
+**Descrição:**
+Este projeto configura um ambiente de banco de dados MongoDB com suporte a Docker Compose.
+**Arquivos principais:**
+- `docker-compose.yml`: Configuração de serviços MongoDB.
+- `data/`: Diretório para persistência de dados.
+**Como executar:**
+1. Execute `docker-compose up` para iniciar os serviços.
+2. Acesse o MongoDB através do cliente configurado.
+
+### 17. Testes com Node.js
+**Diretório:** `nodejs-testes`
+**Descrição:**
+Este projeto explora boas práticas de testes em aplicações Node.js, incluindo testes unitários e de integração.
+**Arquivos principais:**
+- `server.js`: Configuração do servidor.
+- `src/`: Implementação de funcionalidades e testes.
+- `populate.sql`: Script para popular o banco de dados.
+**Como executar:**
+1. Instale as dependências com `npm install`.
+2. Execute os testes com `npm test`.
+
+### 18. PostgreSQL
+**Diretório:** `postgresql`
+**Descrição:**
+Este projeto configura um ambiente de banco de dados PostgreSQL com suporte a Docker Compose.
+**Arquivos principais:**
+- `docker-compose.yml`: Configuração de serviços PostgreSQL.
+- `docker/`: Scripts auxiliares.
+**Como executar:**
+1. Execute `docker-compose up` para iniciar os serviços.
+2. Acesse o PostgreSQL através do cliente configurado.
+
+### 19. Segurança com Node.js
+**Diretório:** `seguranca-nodejs`
+**Descrição:**
+Este projeto explora técnicas de segurança em aplicações Node.js, incluindo autenticação e proteção de dados.
+**Arquivos principais:**
+- `api/`: Implementação de APIs seguras.
+**Como executar:**
+1. Instale as dependências com `npm install`.
+2. Execute o servidor com `npm start`.
+
+### 20. Documentação com Swagger
+**Diretório:** `swagger-documentation`
+**Descrição:**
+Este projeto implementa documentação de APIs utilizando Swagger.
+**Arquivos principais:**
+- `tsconfig.json`: Configuração do TypeScript.
+- `src/`: Implementação das APIs e documentação.
+**Como executar:**
+1. Instale as dependências com `npm install`.
+2. Execute o servidor com `npm start`.
+3. Acesse a documentação em `http://localhost:3000/api-docs`.
+
+### 21. WordPress com MySQL
+**Diretório:** `wordpress-mysql`
+**Descrição:**
+Este projeto configura um ambiente WordPress com suporte a banco de dados MySQL utilizando Docker Compose.
+**Arquivos principais:**
+- `docker-compose.yml`: Configuração de serviços WordPress e MySQL.
+**Como executar:**
+1. Execute `docker-compose up` para iniciar os serviços.
+2. Acesse o WordPress em `http://localhost`.
+
